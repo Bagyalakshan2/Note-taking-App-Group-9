@@ -11,9 +11,10 @@ use Illuminate\Http\Request;
 
 class NoteController extends Controller
 {
+
     public function index()
     {
-        $notes = Note::all(); // Retrieve all notes from the database
+        $notes = Note::all(); 
         return view('notes.index', compact('notes')); // Pass notes to the view
         }
 
@@ -33,6 +34,13 @@ class NoteController extends Controller
         Note::create($request->all());
         return redirect('/')->with('success', 'Note created successfully!');
     }
+
+   
+
+   
+
+  
+
 }
 ?>
 
