@@ -37,6 +37,11 @@ class NoteController extends Controller
        
     }
 
+    
+    Note::create($request->all());
+        return redirect('/')->with('success', 'Note created successfully!');
+
+
    
 
    
