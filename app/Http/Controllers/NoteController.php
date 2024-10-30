@@ -34,8 +34,7 @@ class NoteController extends Controller
             'content' => 'required',
         ]);
 
-        Note::create($request->all());
-        return redirect('/')->with('success', 'Note created successfully!');
+       
     }
 
    
