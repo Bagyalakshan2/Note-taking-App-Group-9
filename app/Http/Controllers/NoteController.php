@@ -37,6 +37,13 @@ class NoteController extends Controller
        
     }
 
+
+   public function update(Request $request) 
+    { 
+        $notes = Note::findOrFail(); 
+        return $notes->update($request->all()); 
+    } 
+
     
     Note::create($request->all());
         return redirect('/')->with('success', 'Note created successfully!');
